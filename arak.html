@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>VIP Autóvarázs</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .price-card {
+                background-color: #222;
+                border: 1px solid #444;
+                border-radius: 12px;
+                padding: 20px;
+                margin: 15px 0;
+                transition: transform 0.2s ease, background-color 0.3s ease;
+                cursor: pointer;
+            }
+            .price-card:hover {
+                background-color: #2a2a2a;
+                transform: scale(1.03);
+            }
+            .price-details {
+                display: none;
+                margin-top: 10px;
+                border-top: 1px dashed #888;
+                padding-top: 10px;
+                font-size: 0.95rem;
+            }
+            .price-card.active .price-details {
+                display: block;
+            }
+            .price-card h4 {
+                margin-bottom: 10px;
+            }
+            .price-card p {
+                text-align: center;
+                margin-bottom: 0;
+                font-weight: bold;
+                font-size: 1.2rem;
+            }
+            .price-card h4 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-size: 1.3rem;
+                position: relative;
+            }
+
+            .price-card .arrow-icon {
+                font-size: 1rem;
+                transition: transform 0.3s ease;
+            }
+
+            .price-card.active .arrow-icon {
+                transform: rotate(180deg);
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">VIP Autóvarázs</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Kezdőlap</a></li>
+                        <li class="nav-item"><a class="nav-link" href="arak.html">Árak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="content-wrapper">
+            <div class="container my-5 p-4 rounded shadow bg-dark text-light">
+                <section id="pricing">
+                    <h2 class="text-center">Áraink</h2>
+                    <p class="text-center"><i>Az árak az autó szennyezettségétől függően változhatnak.</i></p>
+                    <div class="row text-center">
+                        <div class="col-md-3 price-card">
+                            <h4>Standard</h4>
+                            <p>10.000 Ft</p>
+                            <span class="arrow-icon">▼</span>
+                            <div class="price-details">
+                                <p>Általános porszívózás, felülettisztítás</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 price-card">
+                            <h4>Medium</h4>
+                            <p>17.000 Ft</p>
+                            <span class="arrow-icon">▼</span>
+                            <div class="price-details">
+                                <p>1 lépcsős kárpit tisztítás, teljeskörű porszívózás, általános felület tisztítás</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 price-card">
+                            <h4>Exkluzív</h4>
+                            <p>25.000 Ft</p>
+                            <span class="arrow-icon">▼</span>
+                            <div class="price-details">
+                                <p>2 lépcsős kárpit tisztítás, teljeskörű porszívózás, felületek tisztítása és ápolása, gumi és műanyag elemek ápolása +extra Carzone autós illatosító az általad választott illatban</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 price-card">
+                            <h4>VIP Varázs</h4>
+                            <p>30.000 Ft</p>
+                            <span class="arrow-icon">▼</span>
+                            <div class="price-details">
+                                <p>3 lépcsős kárpit tisztítás, teljeskörű porszívózás, felületek tisztítása és ápolása, gumi és műanyag elemek ápolása, padlószőnyeg tisztítása, biztonsági övek tisztítása +Carzone autós illatosító az általad választott illatban </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Extra szolgáltatások -->
+                <section id="services" class="my-5">
+                    <h2 class="text-center">Extra szolgáltatásaink</h2>
+                    <div class="row text-center">
+                        <div class="col-md-6 price-card">
+                            <h4>Standard fényszóró polírozás</h4>
+                            <p>10.000 Ft</p>
+                            <span class="arrow-icon">▼</span>
+                            <div class="price-details">
+                                <p>Professzionális polírozás, hogy az autód fényszórói ismét újak legyenek.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 price-card">
+                            <h4>VIP fényszóró polírozás kerámia védelemmel</h4>
+                            <p>15.000 Ft</p>
+                            <span class="arrow-icon">▼</span>
+                            <div class="price-details">
+                                <p>Polírozás + kerámia bevonat a hosszabb tartósság érdekében.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-center mt-3"><i>Ezen szolgáltatásunk önállóan is rendelhető, nem szükséges belső tisztítás.</i></p>
+                </section>
+
+                <!-- Hűségprogram és Kiszállási költség -->
+                <section class="my-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="p-4 rounded bg-secondary text-light">
+                                <h2 class="text-center">Hűségprogramunk</h2>
+                                <p class="text-center">
+                                    Minden <strong>10. tisztítás</strong> után <strong>ingyen Médium csomagot</strong> kapsz!<br>
+                                    Ha nagyobb csomagot szeretnél, <strong>50% kedvezmény</strong> jár az Exkluzív vagy VIP csomagra.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 rounded bg-danger text-light">
+                                <h2 class="text-center">🚗 Kiszállási költség</h2>
+                                <p class="text-center">
+                                    📍 <strong>Debrecen 25 km-es körzetében: INGYENES</strong> <br>
+                                    📍 <strong>Távolabbi helyszíneken: 50 Ft/km</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                        <h2 class="text-center" style="margin-top: 5%;">Kapcsolat</h2>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <p><strong>Telefon:</strong> <a href="tel:+36307908808">+36 30 790 8808</a></p>
+                            </div>
+                            <div class="col-md-4"></div>
+                            <p><strong>Email:</strong> <a href="mailto:vipautovarazskozmetika@gmail.com">vipautovarazskozmetika@gmail.com</a></p>
+                            </div>
+                            <div class="col-md-4"></div>
+                            <p><strong>Székhely:</strong> 4231 Bököny, Bem József utca 21</p>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
+        
+
+        <script>
+            function togglePriceDetails(card) {
+                card.classList.toggle("active");
+            }
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

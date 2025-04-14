@@ -1,0 +1,273 @@
+/* 🌳 Háttér: zöldes-barnás gradient */
+#before-after-slider {
+    color: white;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-pair-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    min-height: 350px;
+}
+
+.image-pair {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.image-pair.active {
+    display: flex;
+}
+
+.image-box {
+    flex: 1 1 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.image-box img:hover {
+    transform: scale(1.03);
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #ffc107;
+}
+
+.arrow-icon {
+    font-size: 2.5rem;
+    color: #ffc107;
+}
+
+.nav-btn {
+    background-color: #1a472a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #146c43;
+}
+
+@media (max-width: 768px) {
+    .arrow-icon {
+        display: none;
+    }
+
+    .image-pair {
+        flex-direction: column;
+    }
+
+    .image-box {
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+body {
+
+    background: linear-gradient(135deg, #4e3b31, #7a6b5a, #8c7b65, #2e512f);
+    background-attachment: fixed;
+    color: white;
+    font-family: Serif, Garamond;
+    background-image: url(backgroundimage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.price-card h4 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 5px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.price-card .arrow-icon {
+    display: block;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.price-card.active .arrow-icon {
+    transform: rotate(180deg);
+}
+
+.price-details {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* 🌿 Kiemelt szekciók háttere (áttetsző sötétítés) */
+/* 🌌 Háttér konténer, ami mindent egységesen lefed */
+#content-wrapper {
+    background: rgba(20, 20, 20, 0.9); /* Egységes sötétszürke háttér */
+    padding: 20px; /* Szélek távolsága */
+    border-radius: 10px; /* Lekerekített sarkok */
+    width: 90%;
+    max-width: 1200px;
+    margin: auto; /* Középre helyezés */
+}
+
+/* 🔲 Eltávolítjuk a belső elemek saját háttérszínét */
+.section {
+    background: transparent !important; /* Átlátszó háttér, hogy ne törje meg az egységes dizájnt */
+    padding: 15px;
+}
+
+.carousel-inner {
+    align-self: auto;
+    width: 80%;
+    height: 10%; /* Fix magasság */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover; /* A kép kitölti a területet, torzulás nélkül */
+}
+
+/* 💚 Gombok és interaktív elemek */
+button, .btn {
+    background-color: #1a472a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #146c43;
+}
+
+/* 📜 Ár- és szolgáltatás kártyák */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    z-index: 5;
+    display: none;
+    transition: background 0.5s ease-in-out; /* 🔄 Fokozatosan sötétedik */
+}
+
+/* 🔽 Lenyíló rész (egységes háttér) */
+.price-card {
+    position: relative;
+    z-index: 10;
+    background: rgba(0, 50, 0, 0.85); /* 🟩 Egységes sötét háttér */
+    transition: background 0.3s ease-in-out;
+}
+
+.price-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* 🔽 Lenyíló rész */
+.price-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, padding 0.3s ease-in-out;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 0;
+}
+
+/* 🟩 Árak és szolgáltatások doboz */
+.price-card, .extra-services {
+    background: rgba(0, 50, 0, 0.85); /* Sötétzöld egységes háttér */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/* 📱 Telefonbarát méretek */
+@media (max-width: 768px) {
+    .price-card {
+        font-size: 14px;
+        padding: 12px;
+    }
+    
+    .price-details {
+        font-size: 13px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.navbar {
+    background-color: #1f1f1f;
+}
+
+.navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: #ffc107 !important;
+}
+
+.nav-link {
+    color: #ffffff !important;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.highlight {
+    color: #ffc107;
+}
+
+.carousel-inner img {
+    align-self: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
