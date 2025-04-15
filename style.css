@@ -137,9 +137,9 @@ body {
 /* 🌌 Háttér konténer, ami mindent egységesen lefed */
 #content-wrapper {
     background: rgba(20, 20, 20, 0.9); /* Egységes sötétszürke háttér */
-    padding: 20px; /* Szélek távolsága */
+    padding: 1%; /* Szélek távolsága */
     border-radius: 10px; /* Lekerekített sarkok */
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
     margin: auto; /* Középre helyezés */
 }
@@ -271,3 +271,16 @@ body {
     max-height: 400px;
     object-fit: cover;
 }
+.custom-toggler {
+    background-color: #383737; /* Light grey */
+    border: 1px solid #2b2a2a;
+    padding: 6px 10px;
+    border-radius: 4px;
+  }
+  #autouj{
+    font-size:300%;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-family: 'Caveat', cursive;
+    color: #ffc107;
+  }
