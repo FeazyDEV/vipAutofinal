@@ -1,4 +1,126 @@
 /* 🌳 Háttér: zöldes-barnás gradient */
+#smol{
+    width: 115px;
+}
+
+.gallery-strip {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+    margin-bottom: 40px;
+
+  }
+
+  .comparison-pair {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+
+  }
+
+  .comparison-image {
+    flex: 0 0 auto;
+    width: 48%;
+    max-width: 400px;
+    background-color: #2e2f31;
+    border-radius: 10px;
+    padding: 5px;
+
+  }
+
+  .comparison-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .caption {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 6px;
+    color: #cacaca !important;
+  }
+
+  .caption-after {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 0.85rem;
+    text-align: center;
+    margin-top: 6px;
+    font-family: 'Pacifico', cursive;
+    color: #cacaca !important;
+  }
+
+  @media (min-width: 480px) {
+    .gallery-strip {
+        align-items: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .comparison-image {
+      width: 80vw;
+    }
+  }
+
+.pricing-button {
+    display: inline-block;
+    padding: 12px 12px;
+    background-color: #a73207; /* korall szín – feltűnő, de barátságos */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pricing-button:hover {
+    background-color: #df4213;
+    transform: scale(1.05);
+  }
+.gallery {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .gallery-item {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery-item img {
+    width: 160px;
+    height: 160px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .gallery-title {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ffffff;
+  }
+
+  @media (max-width: 900px) {
+    .gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
 #before-after-slider {
     color: white;
 }
@@ -65,7 +187,7 @@
     background-color: #1a472a;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 12px;
     font-size: 1.5rem;
     border-radius: 8px;
     cursor: pointer;
@@ -74,6 +196,7 @@
 
 .nav-btn:hover {
     background-color: #146c43;
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
@@ -283,4 +406,9 @@ body {
     margin-top: 20px;
     font-family: 'Caveat', cursive;
     color: #ffc107;
+  }
+  @media (min-width: 560px) {
+    #logos {
+        margin-top: 100px;
+    }
   }
